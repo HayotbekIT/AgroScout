@@ -1,0 +1,28 @@
+$container-padding: 30px;
+$container-width: (
+    1306px + ($container-padding * 2)
+);
+$container-table: (
+    708px + ($container-padding * 2)
+);
+$container-mobile: (
+    290px + ($container-padding * 2)
+);
+
+.Container {
+    
+    margin: 0 auto;
+    padding: 0 $container-padding;
+
+    @media(min-width: 320px) {
+        width: $container-mobile;
+    }
+
+    @media(min-width: 768px) {
+        width: $container-table;
+    }
+
+    @media(min-width: 1366px) {
+        width: $container-width;
+    }
+}
