@@ -1,0 +1,37 @@
+@import "./../../styles/index.scss";
+
+.Nav {
+    background: $black-2;
+
+    &igation {
+        &__row {
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                width: 72px;
+                display: inline-block;
+            }
+        }
+
+        &__left, &__link-wrapper {
+            display: flex;
+            align-items: center;
+            column-gap: 11px;
+        }
+
+        &__link {
+            font-family: $rufo;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+            text-decoration: none;
+            &-wrapper{
+                column-gap: 2px !important;
+                cursor: pointer;
+            }
+        }
+    }
+}
