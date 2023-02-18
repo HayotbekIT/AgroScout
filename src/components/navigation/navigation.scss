@@ -1,5 +1,16 @@
 @import "./../../styles/index.scss";
 
+%item {
+    border: none;
+    outline: none;
+    display: inline-block;
+    background: transparent;
+}
+%fg{
+    display: flex;
+    column-gap: 20px;
+}
+
 .Nav {
     background: $black-2;
 
@@ -14,10 +25,16 @@
             }
         }
 
-        &__left, &__link-wrapper {
+        &__left,
+        &__right,
+        &__link-wrapper {
             display: flex;
             align-items: center;
             column-gap: 11px;
+        }
+
+        &__right {
+            column-gap: 71px;
         }
 
         &__link {
@@ -28,10 +45,42 @@
             line-height: 22px;
             color: #FFFFFF;
             text-decoration: none;
-            &-wrapper{
+
+            &-wrapper {
                 column-gap: 2px !important;
                 cursor: pointer;
             }
+        }
+
+        &__social {
+            display: flex;
+            column-gap: 25px;
+        }
+
+        &__lang {
+            @extend %fg;
+
+            &-item {
+
+                @extend %item;
+                font-family: $rufo;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+
+            }
+        }
+
+        &__option {
+            @extend %fg;
+            &-item {
+                @extend %item;
+            }
+
         }
     }
 }
