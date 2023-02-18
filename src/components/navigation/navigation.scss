@@ -8,7 +8,14 @@
 }
 %fg{
     display: flex;
-    column-gap: 20px;
+    
+    @media(min-width: 320px) {
+        column-gap: 10px;
+    }
+
+    @media(min-width: 768px) {
+        column-gap: 20px;
+    }
 }
 
 .Nav {
@@ -34,7 +41,18 @@
         }
 
         &__right {
-            column-gap: 71px;
+            
+            @media(min-width: 320px) {
+                column-gap: 12px;
+            }
+        
+            @media(min-width: 768px) {
+                column-gap: 32px;
+            }
+        
+            @media(min-width: 1366px) {
+                column-gap: 71px;
+            }
         }
 
         &__link {
@@ -54,12 +72,26 @@
 
         &__social {
             display: flex;
-            column-gap: 25px;
+            
+            @media(min-width: 320px) {
+                column-gap: 7px;
+            }
+        
+            @media(min-width: 768px) {
+                column-gap: 20px;
+            }
+        
+            @media(min-width: 1366px) {
+                column-gap: 25px;
+            }
         }
 
         &__lang {
             @extend %fg;
-
+            
+            @media(max-width: 767px) {
+                column-gap: 7px !important;
+            }
             &-item {
 
                 @extend %item;
@@ -70,8 +102,6 @@
                 line-height: 29px;
                 text-transform: uppercase;
                 color: #FFFFFF;
-
-
             }
         }
 
