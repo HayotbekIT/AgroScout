@@ -137,9 +137,12 @@
 
             &-item {
                 @extend %item;
+                min-width: 20px;
+                min-height: 20px;
                 &--mobile{
                     @media(min-width: 320px) {
                         display: inline-block;
+                        
                     }
     
                     @media(min-width: 768px) {

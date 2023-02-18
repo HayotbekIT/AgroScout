@@ -12,10 +12,14 @@ import Instagram from "./../../images/icons/instagram-icon.svg"
 import TikTok from "./../../images/icons/tik-tok-icon.svg"
 import Basket from "./../../images/icons/basket-icon.svg"
 import Menu from "./../../images/icons/menu-icon.svg"
+import Phone2 from "./../../images/icons/phone-icon-2.svg"
 
 
 
 export default function Navigation() {
+    const MenuFunc = ()=>{
+        console.log("hi")
+    }
     return (
         <nav className="Nav">
             <Container>
@@ -44,11 +48,11 @@ export default function Navigation() {
                             <button className="Navigation__option-item">
                                 <Image src={Basket} alt={"Basket icon"} />
                             </button>
-                            <button className="Navigation__option-item">
+                            <button onClick={MenuFunc} className="Navigation__option-item">
                                 <Image src={Menu} alt={"Basket icon"} />
                             </button>
                             <button className="Navigation__option-item Navigation__option-item--mobile">
-                                <Image src={Menu} alt={"Basket icon"} />
+                                <Image src={Phone2} alt={"Menu icon"} />
                             </button>
                         </div>
 
