@@ -27,7 +27,7 @@ export default function Navigation() {
 
                         <div className="Navigation__link-wrapper">
                             <Image src={Phone} alt={"Phone icon"} />
-                            <Url text={"+7861 21791 18"} href={"#!"} classes="Navigation__link" />
+                            <Url text={"+7861 21791 18"} href={"#!"} classes="Navigation__link Navigation__link-mobile" />
                         </div>
                     </div>
                     <div className="Navigation__right">
@@ -45,6 +45,9 @@ export default function Navigation() {
                                 <Image src={Basket} alt={"Basket icon"} />
                             </button>
                             <button className="Navigation__option-item">
+                                <Image src={Menu} alt={"Basket icon"} />
+                            </button>
+                            <button className="Navigation__option-item Navigation__option-item--mobile">
                                 <Image src={Menu} alt={"Basket icon"} />
                             </button>
                         </div>

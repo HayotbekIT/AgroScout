@@ -6,9 +6,10 @@
     display: inline-block;
     background: transparent;
 }
-%fg{
+
+%fg {
     display: flex;
-    
+
     @media(min-width: 320px) {
         column-gap: 10px;
     }
@@ -41,15 +42,15 @@
         }
 
         &__right {
-            
+
             @media(min-width: 320px) {
                 column-gap: 12px;
             }
-        
+
             @media(min-width: 768px) {
                 column-gap: 32px;
             }
-        
+
             @media(min-width: 1366px) {
                 column-gap: 71px;
             }
@@ -68,49 +69,84 @@
                 column-gap: 2px !important;
                 cursor: pointer;
             }
+
+            &-mobile {
+                @media(min-width: 320px) {
+                    display: none;
+                }
+
+                @media(min-width: 768px) {
+                    display: inline-block;
+                }
+            }
         }
 
         &__social {
             display: flex;
-            
+
             @media(min-width: 320px) {
                 column-gap: 7px;
             }
-        
+
             @media(min-width: 768px) {
                 column-gap: 20px;
             }
-        
+
             @media(min-width: 1366px) {
                 column-gap: 25px;
+            }
+
+            &-item {
+                @media(min-width: 320px) {
+                    min-width: 20px;
+                    min-height: 20px;
+                }
             }
         }
 
         &__lang {
             @extend %fg;
-            
+
             @media(max-width: 767px) {
                 column-gap: 7px !important;
             }
-            &-item {
 
+            &-item {
                 @extend %item;
                 font-family: $rufo;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 24px;
-                line-height: 29px;
                 text-transform: uppercase;
                 color: #FFFFFF;
+
+                @media(min-width: 320px) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                @media(min-width: 768px) {
+                    column-gap: 20px;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
             }
         }
 
         &__option {
             @extend %fg;
+
             &-item {
                 @extend %item;
+                &--mobile{
+                    @media(min-width: 320px) {
+                        display: inline-block;
+                    }
+    
+                    @media(min-width: 768px) {
+                        display: none;
+                    }
+                }
             }
-
         }
     }
 }
