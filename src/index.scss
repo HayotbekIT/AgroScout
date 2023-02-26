@@ -1,4 +1,22 @@
-button, input, textarea{
+button,
+input,
+textarea {
     display: inline-block;
     cursor: pointer;
+}
+
+.section-header {
+    background-size: cover;
+}
+
+.header {
+    &-wrapper {
+        background-image: url("./images/header/background-customer.svg");
+        background-size: cover;
+        padding: 100px 0 54px;
+    }
+    &__content{
+        max-width: 695px;
+        width: 100%;
+    }
 }
