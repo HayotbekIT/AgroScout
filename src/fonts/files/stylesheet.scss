@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('RFRufo-Bold.woff2') format('woff2'),
+        url('RFRufo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('RFRufo-Light.woff2') format('woff2'),
+        url('RFRufo-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('RFRufo-Regular.woff2') format('woff2'),
+        url('RFRufo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
