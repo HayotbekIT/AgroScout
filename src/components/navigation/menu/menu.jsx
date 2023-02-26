@@ -8,11 +8,13 @@ import Drones from "./../../../images/icons/navigation-icon/drones-icon.svg"
 import News from "./../../../images/icons/navigation-icon/news-icon.svg"
 import Company from "./../../../images/icons/navigation-icon/company-icon.svg"
 import Phone from "./../../../images/icons/navigation-icon/phone-icon.svg"
-
+import WA from "./../../../images/icons/whatsapp-icon.svg"
+import Telegram from "./../../../images/icons/telegram-icon.svg"
+import Wechat from "./../../../images/icons/wechat-icon.svg"
 
 export default function NavbarMenu(props) {
   const { classes } = props
-  const navIconPath = "./../../../images/icons/navigation-icon/"
+  
   const navItems = [
     {
       id: 1,
@@ -72,7 +74,19 @@ export default function NavbarMenu(props) {
           )
         })
       }
-
+      <li className='NavbarMenu__item NavbarMenu__social'>
+        <div className="NavbarMenu__social-wrapper">
+          <a href="#!" className="NavbarMenu__social__item">
+            <img src={WA} alt="What's app icon" />
+          </a>
+          <a href="#!" className="NavbarMenu__social__item">
+            <img src={Telegram} alt="Telegram icon" />
+          </a>
+          <a href="#!" className="NavbarMenu__social__item">
+            <img src={Wechat} alt="Wechat icon" />
+          </a>
+        </div>
+      </li>
     </ul>
   )
 }

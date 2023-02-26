@@ -139,6 +139,9 @@
                 @extend %item;
                 min-width: 20px;
                 min-height: 20px;
+                .NavbarMenu{
+                    cursor: default;
+                }
                 &--mobile{
                     @media(min-width: 320px) {
                         display: inline-block;
@@ -154,5 +157,6 @@
                 position: relative;
             }
         }
+
     }
 }
