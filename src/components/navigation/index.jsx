@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../container'
 import Image from '../image'
@@ -12,14 +12,18 @@ import Instagram from "./../../images/icons/instagram-icon.svg"
 import TikTok from "./../../images/icons/tik-tok-icon.svg"
 import Basket from "./../../images/icons/basket-icon.svg"
 import Menu from "./../../images/icons/menu-icon.svg"
+import CloseMenu from "./../../images/icons/close-menu.svg"
 import Phone2 from "./../../images/icons/phone-icon-2.svg"
+import NavbarMenu from './menu/menu'
 
 
 
 export default function Navigation() {
-    const MenuFunc = ()=>{
-        console.log("hi")
+    const [stateMenu, setMenu] = useState(false)
+    const SetMenuFunc = ()=>{
+        setMenu(stateMenu => !stateMenu)
     }
+    // console.log(stateMenu)
     return (
         <nav className="Nav">
             <Container>
@@ -48,8 +52,9 @@ export default function Navigation() {
                             <button className="Navigation__option-item">
                                 <Image src={Basket} alt={"Basket icon"} />
                             </button>
-                            <button onClick={MenuFunc} className="Navigation__option-item">
-                                <Image src={Menu} alt={"Basket icon"} />
+                            <button onClick={SetMenuFunc} className="Navigation__option-item Navigation__option-menu">
+                                <Image src={ stateMenu? CloseMenu :Menu } alt={"Menu icon"} />
+                                <NavbarMenu classes={stateMenu ? "NavbarMenu-block": ""} />
                             </button>
                             <button className="Navigation__option-item Navigation__option-item--mobile">
                                 <Image src={Phone2} alt={"Menu icon"} />

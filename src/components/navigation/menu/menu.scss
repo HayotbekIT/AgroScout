@@ -1,0 +1,49 @@
+@import "./../../../styles/index.scss";
+
+.NavbarMenu {
+    display: none;
+    position: absolute;
+    top: 47px;
+    right: 0;
+    min-width: 271px;
+    background: rgba(24, 24, 24, 0.95);
+    padding: 17px 0 44px;
+
+    &>*+* {
+        margin-top: 20px;
+    }
+
+    &-block {
+        display: block;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        column-gap: 8px;
+        margin-left: -20px;
+        text-decoration: none;
+        color: $white;
+        & > *{
+            flex-shrink: 0;
+        }
+
+    }
+
+    &__text {
+        font-family: $rufo;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
