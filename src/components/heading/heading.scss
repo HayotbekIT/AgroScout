@@ -4,4 +4,11 @@
     font-size: 72px;
     line-height: 86px;
     color: $white;
+
+    &-2 {
+        font-weight: 700;
+        font-size: 120px;
+        line-height: 144px;
+        color: rgba(255, 255, 255, 0.2);
+    }
 }
