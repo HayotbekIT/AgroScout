@@ -1,0 +1,64 @@
+@import "./../../styles/index.scss";
+
+%style {
+    font-family: $rufo;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.section-header {
+    background-size: cover;
+}
+
+.header {
+    &-wrapper {
+        background-image: url("../../images/header/background-customer.svg");
+        background-size: cover;
+        padding: 100px 0 54px;
+    }
+
+    &__content {
+        max-width: 695px;
+        width: 100%;
+        position: relative;
+
+        &-image {
+            position: absolute;
+            left: -100%;
+            top: 55%;
+            right: 0;
+            max-height: 155px;
+            height: 100%;
+        }
+
+        &-advantage {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 55px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 160px;
+    }
+}
+
+.advantage {
+    &__title {
+        @extend %style;
+        font-size: 48px;
+    }
+
+    &__text {
+        font-size: 24px;
+        @extend %style;
+    }
+
+    &__wrap {
+        &>*+* {
+            margin-top: 16px;
+        }
+    }
+}
