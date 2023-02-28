@@ -10,12 +10,14 @@
 
 .section-header {
     background-size: cover;
+    background-position: center;
 }
 
 .header {
     &-wrapper {
         background-image: url("../../images/header/background-customer.svg");
         background-size: cover;
+        background-position: center bottom;
         padding: 100px 0 54px;
     }
 
@@ -53,8 +55,8 @@
     }
 
     &__text {
-        font-size: 24px;
         @extend %style;
+        font-size: 24px;
     }
 
     &__wrap {

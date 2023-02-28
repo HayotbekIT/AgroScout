@@ -1,0 +1,43 @@
+@import "./../../styles/index.scss";
+
+.card {
+    max-width: 422px;
+    width: 100%;
+
+    &__default {
+        padding: 56px 33px 62px 30px;
+
+        &>*+* {
+            margin-top: 18px;
+        }
+
+        &-top {
+            display: flex;
+            column-gap: 11px;
+            align-items: center;
+        }
+
+        &-icon {
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+
+            img[alt] {
+                font-size: 15px;
+            }
+        }
+
+        &-title {
+            font-size: 22px;
+            line-height: 22px;
+            color: $white;
+        }
+
+        &-text {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 31px;
+            color: $white;
+        }
+    }
+}

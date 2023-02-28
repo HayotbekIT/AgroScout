@@ -4,3 +4,12 @@
 .inner{
     padding: 85px 0 110px;
 }
+
+.advantage{
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px 17px;
+    }
+}
