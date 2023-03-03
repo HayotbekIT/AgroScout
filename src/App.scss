@@ -1,15 +1,40 @@
 // @import "./fonts/index.scss";
 @import "./styles/index.scss";
 
-.inner{
+.inner {
     padding: 85px 0 110px;
 }
 
-.advantage{
-    &__cards{
+%mt{
+    margin-top: 60px;
+}
+
+.advantage {
+    &__cards {
+        @extend %mt;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 20px 17px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            top: -80px;
+            right: -30px;
+            width: 265px;
+            height: 265px;
+            background-image: url("./images/other/bg-drone-icon.svg");
+        }
+    }
+}
+
+.product {
+    &__cards {
+        @extend %mt;
+        display: flex;
+        justify-content: space-between;
     }
 }
