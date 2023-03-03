@@ -50,12 +50,23 @@ export default function Home() {
             <div className="product__cards">
               {
                 products.map((product, index) => {
-                  const { img, title, brand, model, price, id} = product
+                  const { img, title, brand, model, price, id } = product
                   return (
                     <Card brand={brand} model={model} price={price} title={title} key={id} img={img} card={"product"} obj={product} ></Card>
                   )
                 })
               }
+            </div>
+          </Container>
+        </section>
+        <section className='service'>
+          <Container>
+            <div className="service__content">
+              <h2 className="title-2 service__title">Оказываем услуги!</h2>
+              <p className="service__text">
+                Принимаем заявки по биологической и химической защите растений дронами, картографии и мониторингу.
+              </p>
+              <button className='service__button'>Оставить заявку</button>
             </div>
           </Container>
         </section>
