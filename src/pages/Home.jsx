@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../components/card'
 import Container from '../components/container'
 import Header from '../components/header'
@@ -9,9 +9,15 @@ import Savings from "./../images/icons/card/savings-icon.svg"
 import Services from "./../images/icons/card/services-icon.svg"
 import Drone from "./../images/icons/card/drone-icon.svg"
 import OwnService from "./../images/icons/card/own-service-icon.svg"
-
+import { productsArray } from '../db'
 
 export default function Home() {
+
+  const [products, setProducts] = useState([])
+  useEffect(() => {
+    setProducts(productsArray)
+  }, [])
+
   return (
     <div>
       <Header />
@@ -33,6 +39,23 @@ export default function Home() {
               <Card card={"card"} img={Drone} title={"Собственное производство "} body={"Мы разрабатываем и производим беспилотные летательные аппараты, поэтому знаем все тонкости их работы и можем настроить их под конкретные задачи и потребности клиентов."} />
 
               <Card card={"card"} img={OwnService} title={"Свой сервис"} body={"Любой наш аппарат можно сдать на плановое техническое обслуживание или же в ремонт в наш собственный сервис, который гарантирует качество и оперативность выполнения работ."} />
+            </div>
+          </Container>
+        </section>
+        <section className='product'>
+          <Container>
+            <div className="product__titles">
+              <SectionTitle title={"Наши предложения"} subtitle={"Наша продукция"} />
+            </div>
+            <div className="product__cards">
+              {
+                products.map((product, index) => {
+                  const { img, title, brand, model, price, id} = product
+                  return (
+                    <Card brand={brand} model={model} price={price} title={title} key={id} img={img} card={"product"} obj={product} ></Card>
+                  )
+                })
+              }
             </div>
           </Container>
         </section>
