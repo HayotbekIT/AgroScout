@@ -50,7 +50,7 @@
 }
 
 .service {
-    padding: (154px / 2) 0;
+    padding: calc(154px / 2) 0;
     background-image: url("./images/other/service-bg.jpeg");
     @extend %imgBg;
     position: relative;
@@ -111,6 +111,7 @@
         line-height: 31px;
         color: $white;
         position: relative;
+        padding-right: 111px;
 
         &-block {
             height: 94px;
@@ -119,13 +120,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            bottom: -65px;
+            bottom: -30px;
             left: 0;
             right: 0;
+            transition: 0.4s ease-in-out;
 
             &.hidden {
-                position: static;
-                transition: 0.4s ease-in-out;
+                bottom: -90px;
+
+                width: 100%;
             }
         }
 
@@ -161,5 +164,26 @@
                 }
             }
         }
+    }
+}
+
+.work {
+    &__titles {
+        margin-bottom: 70px;
+    }
+
+    &__list {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 39px;
+        color: $white;
+        
+        &s {
+            display: flex;
+            column-gap: 75px;
+        }
+    }
+    &__row{
+        display: flex;
     }
 }

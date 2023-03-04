@@ -22,7 +22,7 @@ export default function Home() {
 
   const [rotateImage, setRotateImage] = useState(false)
 
-  const RotateImageFunc = ()=>{
+  const RotateImageFunc = () => {
     setRotateImage(rotateImage => !rotateImage)
   }
 
@@ -81,12 +81,55 @@ export default function Home() {
         <section className="about-company">
           <Container>
             <SectionTitle title={"Кто мы такие"} subtitle={"О компании"} />
-            <div className="about-company__content">
+            <div className="about-company__content" >
               <p>
                 Компания STS.center применяет высокотехнологичные агродроны и БПЛА, которые модернизированы и собраны нашими инженерами для сельского и лесного хозяйства, а также для промышленности. В СТС Центр работают опытные агрономы, энтомологи, пилоты, менеджеры и инженеры. Сегодня мы имеем один из самых современных парков дронов в России, что позволяет нам выполнять работы широкого спектра от простой аэрофотосъемки до лидарного сканирования местности и тепловизионного контроля. Внедрение беспилотных технологий в вашем бизнесе поможет сэкономить время и деньги, а также позволит получить большое преимущество перед вашими конкурентами.
               </p>
               <div className={rotateImage ? "about-company__content-block hidden" : "about-company__content-block"} onClick={RotateImageFunc} >
                 <Image classes={rotateImage ? "rotate" : ""} src={ArrowDown} alt={"Error upload"} />
+              </div>
+            </div>
+          </Container>
+        </section>
+        <section className='work'>
+          <Container>
+            <div className="work__titles">
+              <SectionTitle title={"Где мы работаем"} subtitle={"Регионы присутствия"} />
+            </div>
+            <div className="work__row">
+              <div className="work__lists">
+                <ol className="work__list">
+                  <li>1. Московская область</li>
+                  <li>2. Ростовская область</li>
+                  <li>3. Краснодарский край</li>
+                  <li>4. Ставропольский край</li>
+                  <li>5. Северная Осетия</li>
+                  <li>6. Кабардино-Балкария</li>
+                  <li>7. Пензеская область</li>
+                  <li>8. Белгородская область</li>
+                  <li>9. Саратовская область</li>
+                  <li>10. Воронежская область</li>
+                  <li>11. Волгоградская область</li>
+                  <li>12. Астраханская область</li>
+
+                </ol>
+                <ol className="work__list">
+                  <li>13. Самарская область</li>
+                  <li>14. Липецкая область</li>
+                  <li>15. Орловская область</li>
+                  <li>16. Курская область</li>
+                  <li>17. Ульяновская область</li>
+                  <li>18. Карачаево-Черкессия</li>
+                  <li>19. Брянская область</li>
+                  <li>20. Республика Татарстан</li>
+                  <li>21. Тамбовская область</li>
+                  <li>22. Тульская область</li>
+                  <li>23. Калужская область</li>
+                  <li>24. Республика Крым</li>
+                </ol>
+              </div>
+              <div className="work__imageholder">
+                Image
               </div>
             </div>
           </Container>
