@@ -3,10 +3,19 @@
 
 .inner {
     padding: 85px 0 110px;
+
+    &>*+* {
+        margin-top: 110px;
+    }
 }
 
-%mt{
+%mt {
     margin-top: 60px;
+}
+
+%imgBg {
+    background-position: center;
+    background-size: cover;
 }
 
 .advantage {
@@ -27,6 +36,7 @@
             width: 265px;
             height: 265px;
             background-image: url("./images/other/bg-drone-icon.svg");
+            @extend %imgBg;
         }
     }
 }
@@ -36,5 +46,144 @@
         @extend %mt;
         display: flex;
         justify-content: space-between;
+    }
+}
+
+.service {
+    padding: calc(154px / 2) 0;
+    background-image: url("./images/other/service-bg.jpeg");
+    @extend %imgBg;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url("./images/other/service-overflow.svg");
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        max-width: 70%;
+        width: 100%;
+        @extend %imgBg;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        max-width: 763px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 48px;
+        color: $white !important;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 34px;
+        line-height: 54px;
+        color: $white;
+        margin-bottom: 70px;
+    }
+
+    &__button {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 28px;
+        background: transparent;
+        color: $green-1;
+        // 
+        width: 288px;
+        padding: 14px 0 20px;
+        border: 1px solid $green-1;
+    }
+}
+
+.about-company {
+    &__content {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 31px;
+        color: $white;
+        position: relative;
+        padding-right: 111px;
+
+        &-block {
+            height: 94px;
+            background: linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0.63) 100%);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            transition: 0.4s ease-in-out;
+
+            &.hidden {
+                bottom: -90px;
+
+                width: 100%;
+            }
+        }
+
+        .Image {
+            width: 50px;
+            position: relative;
+
+            img {
+                cursor: pointer;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+                width: 200px;
+                border: 2px solid #8D8B8B;
+                position: absolute;
+            }
+
+            &::after {
+                right: -(40px + 200);
+            }
+
+            &::before {
+                left: -(40px + 200);
+            }
+
+            &.rotate {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.work {
+    &__titles {
+        margin-bottom: 70px;
+    }
+
+    &__list {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 39px;
+        color: $white;
+        
+        &s {
+            display: flex;
+            column-gap: 75px;
+        }
+    }
+    &__row{
+        display: flex;
     }
 }
