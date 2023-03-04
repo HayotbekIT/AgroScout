@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCart } from 'react-use-cart'
+import Image from "./../image"
 import "./cards.scss"
 
 export default function Card(props) {
@@ -12,7 +13,7 @@ export default function Card(props) {
                 <div className='card card__default'>
                     <div className="card__default-top">
                         <div className="card__default-icon">
-                            <img src={img} alt="Image error upload" />
+                            <Image src={img} alt={"Error upload"} />
                         </div>
                         <h3 className="card__default-title">{title}</h3>
                     </div>
@@ -21,12 +22,12 @@ export default function Card(props) {
                     </div>
                 </div>
             )
-            
+
         case "product":
             return (
                 <div className="card card__product">
                     <div className="card__product-imageholder">
-                        <img src={img} alt="Error upload" />
+                        <Image src={img} alt={"Error upload"} />
                     </div>
                     <div className="card__product-desc">
                         <h3 className="card__product-title">
@@ -45,7 +46,7 @@ export default function Card(props) {
 
                 </div>
             )
-            
+
         default:
             console.log("error")
             break;
