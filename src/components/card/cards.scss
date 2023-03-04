@@ -53,7 +53,9 @@
             height: 230px;
             overflow: hidden;
             margin-bottom: 27px;
-
+            .Image{
+                height: 100%;
+            }
             img {
                 object-position: center;
                 height: 100%;
