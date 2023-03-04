@@ -103,3 +103,63 @@
         border: 1px solid $green-1;
     }
 }
+
+.about-company {
+    &__content {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 31px;
+        color: $white;
+        position: relative;
+
+        &-block {
+            height: 94px;
+            background: linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0.63) 100%);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: -65px;
+            left: 0;
+            right: 0;
+
+            &.hidden {
+                position: static;
+                transition: 0.4s ease-in-out;
+            }
+        }
+
+        .Image {
+            width: 50px;
+            position: relative;
+
+            img {
+                cursor: pointer;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+                width: 200px;
+                border: 2px solid #8D8B8B;
+                position: absolute;
+            }
+
+            &::after {
+                right: -(40px + 200);
+            }
+
+            &::before {
+                left: -(40px + 200);
+            }
+
+            &.rotate {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}

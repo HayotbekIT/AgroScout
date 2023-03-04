@@ -9,6 +9,8 @@ import Savings from "./../images/icons/card/savings-icon.svg"
 import Services from "./../images/icons/card/services-icon.svg"
 import Drone from "./../images/icons/card/drone-icon.svg"
 import OwnService from "./../images/icons/card/own-service-icon.svg"
+import Image from "./../components/image"
+import ArrowDown from "./../images/icons/arrow-down-icon.svg"
 import { productsArray } from '../db'
 
 export default function Home() {
@@ -17,6 +19,12 @@ export default function Home() {
   useEffect(() => {
     setProducts(productsArray)
   }, [])
+
+  const [rotateImage, setRotateImage] = useState(false)
+
+  const RotateImageFunc = ()=>{
+    setRotateImage(rotateImage => !rotateImage)
+  }
 
   return (
     <div>
@@ -67,6 +75,19 @@ export default function Home() {
                 Принимаем заявки по биологической и химической защите растений дронами, картографии и мониторингу.
               </p>
               <button className='service__button'>Оставить заявку</button>
+            </div>
+          </Container>
+        </section>
+        <section className="about-company">
+          <Container>
+            <SectionTitle title={"Кто мы такие"} subtitle={"О компании"} />
+            <div className="about-company__content">
+              <p>
+                Компания STS.center применяет высокотехнологичные агродроны и БПЛА, которые модернизированы и собраны нашими инженерами для сельского и лесного хозяйства, а также для промышленности. В СТС Центр работают опытные агрономы, энтомологи, пилоты, менеджеры и инженеры. Сегодня мы имеем один из самых современных парков дронов в России, что позволяет нам выполнять работы широкого спектра от простой аэрофотосъемки до лидарного сканирования местности и тепловизионного контроля. Внедрение беспилотных технологий в вашем бизнесе поможет сэкономить время и деньги, а также позволит получить большое преимущество перед вашими конкурентами.
+              </p>
+              <div className={rotateImage ? "about-company__content-block hidden" : "about-company__content-block"} onClick={RotateImageFunc} >
+                <Image classes={rotateImage ? "rotate" : ""} src={ArrowDown} alt={"Error upload"} />
+              </div>
             </div>
           </Container>
         </section>
