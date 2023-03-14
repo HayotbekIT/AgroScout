@@ -12,6 +12,12 @@ import OwnService from "./../images/icons/card/own-service-icon.svg"
 import Image from "./../components/image"
 import ArrowDown from "./../images/icons/arrow-down-icon.svg"
 import { productsArray } from '../db'
+import Map from "./../images/other/map.svg"
+import Bionovatic from "./../images/clients/client-logo-bionovatic-icon.svg"
+import Bayer from "./../images/clients/client-logo-bayer-icon.svg"
+import Corteva from "./../images/clients/client-logo-corteva-icon.svg"
+import KWS from "./../images/clients/client-logo-kws-icon.svg"
+
 
 export default function Home() {
 
@@ -129,7 +135,28 @@ export default function Home() {
                 </ol>
               </div>
               <div className="work__imageholder">
-                Image
+                <Image src={Map} />
+              </div>
+            </div>
+          </Container>
+        </section>
+        <section className='clients'>
+          <Container>
+            <SectionTitle title={"Наши клиенты "} subtitle={"Партнеры"} />
+            <div className="clients__icons">
+              <div className="client__icons-row">
+                <div className="client__icon">
+                  <Image src={Bionovatic} />
+                </div>
+                <div className="client__icon">
+                  <Image src={Bayer} />
+                </div>
+                <div className="client__icon">
+                  <Image src={Corteva} />
+                </div>
+                <div className="client__icon">
+                  <Image src={KWS} />
+                </div>
               </div>
             </div>
           </Container>
