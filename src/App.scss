@@ -210,6 +210,9 @@
 }
 
 .client{
+    @media(min-width: 1366px) {
+        padding-bottom: 110px;
+    }
     &__icon{
         &s-row{
             display: flex;
