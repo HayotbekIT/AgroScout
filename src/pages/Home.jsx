@@ -12,6 +12,7 @@ import OwnService from "./../images/icons/card/own-service-icon.svg"
 import Image from "./../components/image"
 import ArrowDown from "./../images/icons/arrow-down-icon.svg"
 import { productsArray } from '../db'
+import Map from "./../images/other/map.svg"
 
 export default function Home() {
 
@@ -129,7 +130,7 @@ export default function Home() {
                 </ol>
               </div>
               <div className="work__imageholder">
-                Image
+                <img src={Map} alt="Map Error upload" />
               </div>
             </div>
           </Container>

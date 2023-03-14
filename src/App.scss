@@ -168,6 +168,15 @@
 }
 
 .work {
+    background-position: 520px -400px;
+    background-repeat: no-repeat;
+
+    @media(min-width: 1366px) {
+        background-image: url("./images/other/map.svg");
+        padding-top: 103px;
+        padding-bottom: 75px;
+    }
+
     &__titles {
         margin-bottom: 70px;
     }
@@ -177,13 +186,41 @@
         font-size: 24px;
         line-height: 39px;
         color: $white;
-        
+
         &s {
             display: flex;
             column-gap: 75px;
         }
     }
-    &__row{
+
+    &__row {
         display: flex;
+        flex-direction: column-reverse;
+
+        @media(min-width: 1366px) {
+            flex-direction: row;
+        }
+    }
+
+    &__imageholder {
+        @media(min-width: 1366px) {
+            display: none;
+        }
     }
 }
+
+/*
+
+    @media(min-width: 320px) {
+       
+    }
+
+    @media(min-width: 768px) {
+        
+    }
+
+    @media(min-width: 1366px) {
+        
+    }
+
+*/
