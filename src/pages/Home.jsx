@@ -17,6 +17,9 @@ import Bionovatic from "./../images/clients/client-logo-bionovatic-icon.svg"
 import Bayer from "./../images/clients/client-logo-bayer-icon.svg"
 import Corteva from "./../images/clients/client-logo-corteva-icon.svg"
 import KWS from "./../images/clients/client-logo-kws-icon.svg"
+import News1 from "./../images/news/1.jpeg"
+import News2 from "./../images/news/2.jpeg"
+import News3 from "./../images/news/3.jpeg"
 
 
 export default function Home() {
@@ -158,6 +161,19 @@ export default function Home() {
                   <Image src={KWS} />
                 </div>
               </div>
+            </div>
+          </Container>
+        </section>
+
+        <section className='home-news'>
+          <Container>
+            <SectionTitle title={"Что у нас нового"} subtitle={"Новости"} />
+            <div className="home-news__row">
+              <Card card={"news-card"} img={News1} title={"Дроны – будущее сельского хозяйства"} body={"Новые технологии не обходят стороной и самую консервативную отрасль – сельское хозяйство. Согласно прогнозам международной общественной организации Association for Unmanned Vehicle Systems International, в скором времени агросектор станет крупнейшим потребителем дронов – беспилотных летательных аппаратов (БПЛА)."} />
+
+              <Card card={"news-card"} img={News2} title={"Дроны – будущее сельского хозяйства"} body={"Новые технологии не обходят стороной и самую консервативную отрасль – сельское хозяйство. Согласно прогнозам международной общественной организации Association for Unmanned Vehicle Systems International, в скором времени агросектор станет крупнейшим потребителем дронов – беспилотных летательных аппаратов (БПЛА)."} />
+
+              <Card card={"news-card"} img={News3} title={"Дроны – будущее сельского хозяйства"} body={"Новые технологии не обходят стороной и самую консервативную отрасль – сельское хозяйство. Согласно прогнозам международной общественной организации Association for Unmanned Vehicle Systems International, в скором времени агросектор станет крупнейшим потребителем дронов – беспилотных летательных аппаратов (БПЛА)."} />
             </div>
           </Container>
         </section>

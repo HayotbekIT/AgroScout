@@ -223,6 +223,18 @@
     }
 }
 
+.home-news{
+    padding-bottom: 110px;
+    &__row{
+        display: flex;
+        padding-top: 62px;
+        column-gap: 20px;
+    }
+    .card.news-card{
+        background: transparent;
+    }
+}
+
 /*
 
     @media(min-width: 320px) {

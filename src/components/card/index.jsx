@@ -1,5 +1,7 @@
 import React from 'react'
 import { useCart } from 'react-use-cart'
+import Heading from '../heading'
+import Url from '../link'
 import Image from "./../image"
 import "./cards.scss"
 
@@ -15,7 +17,7 @@ export default function Card(props) {
                         <div className="card__default-icon">
                             <Image src={img} alt={"Error upload"} />
                         </div>
-                        <h3 className="card__default-title">{title}</h3>
+                        <Heading heading={"h3"} classes={"card__default-title"}>{title}</Heading>
                     </div>
                     <div className="card__default-text">
                         <p>{body}</p>
@@ -30,9 +32,7 @@ export default function Card(props) {
                         <Image src={img} alt={"Error upload"} />
                     </div>
                     <div className="card__product-desc">
-                        <h3 className="card__product-title">
-                            {title}
-                        </h3>
+                        <Heading heading={"h3"} classes={"card__product-title"}>{title}</Heading>
                         <ul className='card__product-list'>
                             <li className='card__product-item'>Бренд: {brand}</li>
                             <li className='card__product-item'>Модель: {model}</li>
@@ -46,6 +46,27 @@ export default function Card(props) {
 
                 </div>
             )
+
+        case "news-card":
+            return (
+                <div className='card news-card'>
+                    <div className="news-card__imageholder">
+                        <Image src={img} />
+                    </div>
+                    <div className="news-card__content">
+                        <Heading heading={"h3"} classes={"news-card__title"}>{title}</Heading>
+                        <div className="news-card__text">
+                            {body}
+                        </div>
+                        <Url href={"#!"} classes={"news-card__link"}>
+                            Читать полностью
+                        </Url>
+                    </div>
+                </div>
+            )
+
+        case "news-block":
+            return ("")
 
         default:
             console.log("error")
