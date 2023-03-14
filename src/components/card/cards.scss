@@ -53,9 +53,11 @@
             height: 230px;
             overflow: hidden;
             margin-bottom: 27px;
-            .Image{
+
+            .Image {
                 height: 100%;
             }
+
             img {
                 object-position: center;
                 height: 100%;
@@ -100,6 +102,80 @@
             font-size: 30px;
             line-height: 30px;
             color: $white;
+        }
+    }
+
+    .news-card__imageholder{
+        padding: 22px;
+        max-height: 296px;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        .Image{
+            height: 100%;
+            img{
+                height: 100%;
+                object-position: center;
+            }
+        }
+        &::after, &::before{
+            content: "";
+            position: absolute;
+            width: 116px;
+            height: 116px;
+        }
+        &::after{
+            bottom: 0;
+            left: 0;
+            background-image: url("./../../images/icons/new-arrow-left-icon.svg");
+        }
+        &::before{
+            top: 0;
+            right: 0;
+            background-image: url("./../../images/icons/new-arrow-right-icon.svg");
+        }
+    }
+
+    .news-card__content {
+        color: $white;
+
+        @media(min-width: 1366px) {
+            padding-top: 50px;
+        }
+
+        &>*+* {
+            margin-top: 30px;
+        }
+
+        .news-card__title {
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        .news-card__text {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 31px;
+        }
+    }
+
+    .news-card__link {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 16px;
+        color: $green-1;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 1px;
+            background: $green-1;
+            bottom: -12px;
+            left: 0;
+            right: 0;
         }
     }
 }
